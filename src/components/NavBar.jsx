@@ -1,6 +1,13 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 
 export default function SentinelNavbar() {
+    const navigate = useNavigate();
+
+    function handleNavigation(path) {
+        navigate(path);
+    }
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
             <div className="container-fluid px-4">
@@ -31,16 +38,16 @@ export default function SentinelNavbar() {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto align-items-center">
                         <li className="nav-item">
-                            <a className="nav-link px-3" href="#start">Start</a>
+                            <a className="nav-link px-3" href="/">Start</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link px-3" href="#demo">Demo</a>
+                            <a className="nav-link px-3" href="/botpage">Bot Protection</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link px-3" href="#bot-protection">Bot Protection</a>
+                            <a className="nav-link px-3" href="/demo">Demo</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link px-3" href="#home">Home</a>
+                            <a className="nav-link px-3" href="/home">Home</a>
                         </li>
                         <li className="nav-item ms-lg-2">
                             <button
@@ -59,6 +66,7 @@ export default function SentinelNavbar() {
                                     e.currentTarget.style.transform = 'translateY(0)';
                                     e.currentTarget.style.boxShadow = 'none';
                                 }}
+                                onClick={() => handleNavigation("/auth")}
                             >
                                 Login/Signup
                             </button>
