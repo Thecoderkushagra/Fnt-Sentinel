@@ -46,31 +46,6 @@ export default function SentinelNavbar() {
                         <li className="nav-item">
                             <a className="nav-link px-3" href="/demo">Demo</a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link px-3" href="/home">Home</a>
-                        </li>
-                        <li className="nav-item ms-lg-2">
-                            <button
-                                className="btn text-white fw-semibold px-4 py-2"
-                                style={{
-                                    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                                    border: 'none',
-                                    borderRadius: '8px',
-                                    transition: 'transform 0.2s, box-shadow 0.2s'
-                                }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-2px)';
-                                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(102, 126, 234, 0.4)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                }}
-                                onClick={() => handleNavigation("/auth")}
-                            >
-                                Login/Signup
-                            </button>
-                        </li>
                     </ul>
                 </div>
             </div>
