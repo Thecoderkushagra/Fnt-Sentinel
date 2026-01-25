@@ -123,7 +123,7 @@ const Demo = () => {
     setError(null);
 
     try {
-      const response = await axios.post('http://localhost:8080/api/evaluate', request);
+      const response = await axios.post('/api/evaluate', request);
       setResponseData(response.data);
     } catch (err) {
       setError(err.message);
@@ -150,7 +150,7 @@ const Demo = () => {
     setError(null);
 
     try {
-      const response = await axios.post('http://localhost:8080/api/evaluate', customRequest);
+      const response = await axios.post('/api/evaluate', customRequest);
       setResponseData(response.data);
       setShowCustomForm(false);
     } catch (err) {

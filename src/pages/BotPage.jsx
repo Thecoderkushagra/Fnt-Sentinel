@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from "axios";
 
 const fetchBotData = () => {
-  return axios.get(`http://localhost:8080/api/bot/data`);
+  return axios.get(`/api/bot/data`);
 }
 
 const BotPage = () => {
