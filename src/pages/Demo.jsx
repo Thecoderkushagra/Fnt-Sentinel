@@ -96,6 +96,7 @@ const Demo = () => {
     }
   ];
 
+  const demoUrl = import.meta.env.VITE_DEMO_URL;
   const [selectedRequest, setSelectedRequest] = useState(null);
   const [responseData, setResponseData] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -123,7 +124,7 @@ const Demo = () => {
     setError(null);
 
     try {
-      const response = await axios.post('/api/evaluate', request);
+      const response = await axios.post(demoUrl, request);
       setResponseData(response.data);
     } catch (err) {
       setError(err.message);
@@ -150,7 +151,7 @@ const Demo = () => {
     setError(null);
 
     try {
-      const response = await axios.post('/api/evaluate', customRequest);
+      const response = await axios.post(demoUrl, customRequest);
       setResponseData(response.data);
       setShowCustomForm(false);
     } catch (err) {

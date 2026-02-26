@@ -2,8 +2,9 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from "axios";
 
+const VITE_BOT_URL = import.meta.env.VITE_BOT_URL;
 const fetchBotData = () => {
-  return axios.get(`/api/bot/data`);
+  return axios.get(VITE_BOT_URL);
 }
 
 const BotPage = () => {
@@ -12,7 +13,6 @@ const BotPage = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    console.log("Testing useEffect...");
     const testFetch = async () => {
       try {
         console.log("Calling API...");
